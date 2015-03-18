@@ -1,59 +1,34 @@
 $(document).ready(function(){
-    //$("#network").load("inc/network.html"); 
-    //$("#clients").load("inc/clients.html"); 
-    //$("#services").load("inc/services.html");
-    $('body').scrollspy({ target: '#mainNav', offset:100 })
     $("#wrapper").removeClass("invisible");
-    $('.nav li a').on('click', function() {
-        var scrollAnchor = $(this).attr('data-scroll'),
-        scrollPoint = $('section[data-anchor="' + scrollAnchor + '"]').offset().top - 100;
-        $('body,html').animate({
-            scrollTop: scrollPoint
-        }, 500);
-        return false;
+    $('#wrapper').fullpage({
+        menu: '#mainNav',
+        verticalCentered: false,
+        responsive: 900,
+        scrollBar: true,
+        scrollingSpeed: 900,
+        anchors: ['today', 'network', 'services', 'contact'],
+        css3:false,
+        scrollOverflow: true,
+        afterRender: function(){
+            $("#network-list").load("inc/network.html");
+            $("#clients-list").load("inc/clients.html");
+            $("#services-list").load("inc/services.html");
+        },
+        onLeave: function (index, nextIndex, direction){
+            if (index == 2 && direction == 'down'){
+                $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+            }
+            else if(index == 2 && direction == 'up'){
+                $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+            }
+            if (index == 3 && direction == 'down'){
+                $('.section').eq(index -1).removeClass('moveDown').addClass('moveUp');
+            }
+            else if(index == 3 && direction == 'up'){
+                $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
+            }
+            $('.bg-color.bottom').toggleClass('moveDown', nextIndex == 4);
+            $('.bg-color.middle').toggleClass('active', (index == 1 && direction == 'down' ) || (index == 3 && direction == 'up'));
+        }
     });
-
-	$window = $(window);
-    $('.parallax[data-type="background"]').each(function(){
-      var $bgobj = $(this);
-       $(window).scroll(function() {
-			var yPos = ($window.scrollTop() / $bgobj.data('speed'));
-			var coords = + yPos + 'px';
-			$bgobj.css({ top: coords });
-		});
-    });
-
-    var logo = $("#hexLogo");
-    var logoheight = logo.delay(8000).height();
-    var title = $("#title-small");
-    var container = $("header");
-    var nav = $("#mainNav");
-    var navitems = $("ul.nav li a");
-    var scrollpos;
-
-    $(window).scroll(function() {
-       scrollpos = document.body.scrollTop || document.documentElement.scrollTop || window.pageYOffset || 0;
-        if (scrollpos < 0) {
-            scrollpos = 0;
-        }
-        var resizecontainer;
-        if (( 450 - scrollpos) < 0) {
-            resizecontainer = 0;
-        } else {
-            resizecontainer = ((450 - scrollpos) + "px");
-        }
-        container.css({height: resizecontainer});
-        logo.css({opacity: 1});
-        if ((logoheight - scrollpos) < 150) {
-            logo.css({opacity: 0 + (logoheight - scrollpos) / 150});
-        }
-        title.css({opacity: 0});
-        nav.css({background: "transparent"});
-        navitems.css({color: "white"});
-        if (scrollpos > 410) {
-            title.css({opacity: 1});
-            nav.css({background: "white"});
-            navitems.css({color: "black"});
-        }
-      });
 });

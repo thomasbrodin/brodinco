@@ -7,155 +7,126 @@
         <meta name="author" content="Thomas Brodin">
 		<meta name="description" content="HEX Creative Network for brands and artistic development">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<link href="css/custom.css" type="text/css" rel="stylesheet">       
-        <script type="text/javascript" src="js/lib/modernizr.js"></script>
+		<link href="css/style.min.css" type="text/css" rel="stylesheet">       
+        <script type="text/javascript" src="js/lib/modernizr.custom.js"></script>
 
     </head>
 
     <body>
 
         <div id="wrapper" class="invisible">
-			<header> 
+			
+            <header> 
                 <div id="hexLogo"></div>
                 <div id="mainNav">   
                         <ul class="nav left">
                             <li id="title-small"><a href="/">HEX</a></li>
                         </ul>
                         <ul class="nav right">
-                            <li><a href="#today" data-scroll="today">Today</a></li>
-                            <li><a href="#services" data-scroll="services">Services</a></li>
-                            <li><a href="#contact" data-scroll="contact">Contact Us</a></li>
+                            <li data-menuanchor="today"><a href="#today">Today</a></li>
+                            <li data-menuanchor="network"><a href="#network">Network</a></li>
+                             <li data-menuanchor="services"><a href="#services">Services</a></li>
+                            <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
                         </ul>
                 </div>
             </header><!-- close HEADER -->
-
-            <div id="content">
                   	 
-				<section id="today" class="story" data-anchor="today">
-                    <div class="panesHolder">
-                       
-                        <div class="paneContent">
-                            
-                        </div>
-
-                        <a href="#/network" class="btn btn-2 absmid"><span></span><p>What are we talking about?</p>
-						</a>
-
-                        
+				<div id="section-today" class="section today">   
+                    <div class="section-wrap">                 
+                        <a href="#network" class="btn btn-2 absmid">
+                            <span></span>
+                            <p>What are we talking about?</p>
+    				    </a>
                     </div>
-				</section>
+				</div><!-- close section--> 
 
-                <section id="network" class="story" data-anchor="network">
-                    <div class="panesHolder">
+                <div id="section-network" class="section network">
+                    <div class="section-wrap">                    
                         
-                        <div class="paneContent">
-                            <h1>
-                                <span>HEX<br>
-                                    is a creative network<br>
+                        <a id="btn-creatives" href="#network/creatives" class="btn btn-1-2">
+                            <span class="creatives">CREATIVES</span>
+                        </a>
+                        <a id="btn-clients" href="#network/clients" class="btn btn-1-1">
+                            <span class="clients">CLIENTS</span>
+                        </a>
+
+                        <div class="section-inner">
+                            <div id="blurb" class="slide">
+                                <div class="slideContent">
+                                    <h1><span>HEX<br>
+                                        is a creative network<br>
                                         for brands and artistic development<br>
-                                </span>
-                            </h1>
-                            <h2>We shelter your project</h2>
-                            <h1 class="clearfix">
-                                <span>We are <br>a network <br>of creatives</span> 
-                            </h1>
-                            <div>
-                                <p>We are not a regular digital agency.</p>
-                                <div>
-                                    <div style="white-space: nowrap; background: url('img/network/dash.gif') no-repeat scroll 224px 10px transparent;">
-                                         We believe in working as teams.
-                                     </div>
-                                     <div>
-                                      Amazingly talented people joining together to offer creative solutions
-                                      </div>
-                                       </div>
+                                        </span>
+                                    </h1>
+                                    <h1>
+                                        <span>We are<br>
+                                            a network<br>
+                                            of creatives
+                                        </span> 
+                                    </h1>
+                                   
+                                    <p>We are not a regular digital agency.</p>
+                                    <div style="white-space: nowrap; background: url('img/network/dash.gif') no-repeat scroll 224px 10px transparent;"></div>                 
+                                    We believe in working as teams.
+                                    Amazingly talented people joining together to offer creative solutions
+                                </div>
                             </div>
+
+                            <div id="network-list" class="slide" data-anchor="creatives"></div>
+                            <div id="clients-list" class="slide" data-anchor="clients"></div>    
                         </div>
-
-                        <a href="#/network/creative" class="parallax btn btn-1-2 absmid" data-type="background" data-speed="2" style="margin-left:150px">
-                                <span class="creatives">CREATIVES</span>
-                        </a>
-                        <a href="#/network/clients" class="parallax btn btn-1-1 absmid" data-type="background" data-speed="-2" style="margin-left:210px">
-                                <span class="clients">CLIENTS</span>
-                        </a>
-
-                        <div style="background:#00628B;"></div>                     
-                        
-                        <div id="network"></div>
-
-                        <div id="clients"></div>
-                            
+                        <div class="bg-color middle"></div>     
                     </div>
-                </section>
+                </div><!-- close section-->
                
-                <section id="services" class="story" data-anchor="services">
-                    <div class="panesHolder">
-                       
-                        <div class="paneContent">
-                        <h1 class= "mt40">
-							<span>
-                                    You are the</span>
-                            <span>
-                                        Avant&ndash;Garde</span>
-							<span>
-                                                We are your Arriere&ndash;Garde<br>We watch your back</span>
-                        </h1>
+                <div id="section-services" class="section services">
+                    <div class="section-wrap">
+                        <a href="#services/list" class="btn btn-3"></a>
 
-                            <h2>As defined by our philosophy</h2>
+                        <div class="section-inner">
+                            <div class="slide">
+                                <div class="slideContent">
+                                    <h1 class= "mt40">
+            							<span>You are the</span>
+                                        <span>Avant&ndash;Garde</span>
+            							<span>We are your Arriere&ndash;Garde<br>We watch your back</span>
+                                    </h1>
 
-                             <div class="clearfix">
-                                <div style="background: url('img/projects/dash.gif') 0px 8px no-repeat;">&nbsp;</div>
-                                <div>We bring your excellent ideas to life and nurture them into adulthood</div>
-                               
-                             </div>
+                                    <h2>As defined by our philosophy</h2>
+
+                                    <div style="background: url('img/projects/dash.gif') 0px 8px no-repeat;">&nbsp;</div>
+                                    <div>We bring your excellent ideas to life and nurture them into adulthood</div>                     
+                                </div>
+                            </div>
+                           
+                            <div class="slide" id="services-list" data-anchor="list"></div>
+
                         </div>
-                        
-						<a href="#/services/list" class="parallax btn btn-3 absmid" data-type="background" data-speed="10"></a>
-                       
-                        <div id="services"></div>
 						
                     </div>
                 
-				</section>
+				</div><!-- close section-->
 				
-                <section id="contact" class="story" data-anchor="contact">
-                    <div class="panesHolder">
-                    
-                        <div class="paneContent">
-                            <h1 style="color:#FF7266">
-                                We look<br>forward to<br>
-                                meeting you
-                            </h1>
-
-                            <div>
-                                <div>
-									<h2>We are Here
-									</h2>
-                                  	<div>
-										We are always on the lookout for talent, business, friends, like-minded people who want to get to know us. <br>If you’d like to learn more, please howl at us!
-                                    </div>
-                                </div>
-                                <div>
-                                   <address>
-                                       Williamsburg<br> Brooklyn, NY 11211<br>347.248.0495
-                                    </address>
-
-                                    <div>
-										<a href="mailto:info@hotelexistence.com" class="Contact">info@hotelexistence.com</a>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="parallax bgbar" style="background:#66CCCC" data-type="background" data-speed="10"></div>
+                <div id="section-contact" class="section">
+                    <div class="section-wrap">
+                        <div class="section-inner">
+                            <h1>We look<br>forward to<br>meeting you</h1>                
+        					<h2>We are Here</h2>
+                            We are always on the lookout for talent, business, friends, like-minded people who want to get to know us. <br>If you’d like to learn more, please howl at us!
                            
-                    </div>
+                            <address>
+                               Williamsburg<br> Brooklyn, NY 11211<br>347.248.0495
+                            </address>
 
-                </section>
-         
-            </div><!-- close CONTENT-->
+        					<a href="mailto:info@hotelexistence.com" class="Contact">info@hotelexistence.com</a>
+                        </div>
+                    </div>
+                </div><!-- close section-->
+
+                <div class="bg-color bottom"></div>      
 
         </div><!-- close WRAPPER-->
+
         <script type="text/javascript" src="js/main.min.js"></script>
      	<script type="text/javascript">
 

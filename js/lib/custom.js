@@ -28,7 +28,7 @@ $(document).ready(function(){
                 $('.section').eq(index -1).removeClass('moveUp').addClass('moveDown');
             }
             $('.bg-color.bottom').toggleClass('moveDown', nextIndex == 4);
-            $('.bg-color.middle').toggleClass('active', (index == 1 && direction == 'down' ) || (index == 3 && direction == 'up'));
+            $('.bg-color.middle').toggleClass('move', (index == 1 && direction == 'down' ) || (index == 3 && direction == 'up'));
         }
     });
 });

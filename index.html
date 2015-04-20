@@ -9,33 +9,42 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 		<link href="css/style.min.css" type="text/css" rel="stylesheet">       
         <script type="text/javascript" src="js/lib/modernizr.custom.js"></script>
-
+        <link rel="icon" href="/favicon.ico?v=22" />
     </head>
 
     <body>
-
+        <div class="preloader loading">
+          <span class="slice"></span>
+          <span class="slice"></span>
+          <span class="slice"></span>
+          <span class="slice"></span>
+          <span class="slice"></span>
+          <span class="slice"></span>
+        </div>
         <div id="wrapper" class="invisible">
 			
-            <header> 
+            <header class="invisible"> 
                 <div id="hexLogo"></div>
                 <div id="mainNav">   
-                        <ul class="nav left">
-                            <li id="title-small"><a href="/">HEX</a></li>
-                        </ul>
-                        <ul class="nav right">
+                        <ul class="nav">
+                            <li id="title-small"><a href="/">HEX Creative</a></li>
                             <li data-menuanchor="today"><a href="#today">Today</a></li>
                             <li data-menuanchor="network"><a href="#network">Network</a></li>
-                             <li data-menuanchor="services"><a href="#services">Services</a></li>
+                            <li data-menuanchor="services"><a href="#services">Services</a></li>
                             <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
                         </ul>
                 </div>
             </header><!-- close HEADER -->
                   	 
 				<div id="section-today" class="section today">   
-                    <div class="section-wrap">                 
-                        <a href="#network" class="btn btn-2 absmid">
+                    <video autoplay  poster="/img/home/time-lapse.jpg" id="bgvid" loop>
+                        <source src="/img/home/time-lapse.mp4" type="video/mp4">
+                        <source src="/img/home/time-lapse.webm" type="video/webm">
+                    </video>
+                    <div class="section-wrap"> 
+                        <img class="logo-enter" src="/img/home/HEX-white.png">               
+                        <a href="#network" class="btn arrow-down">
                             <span></span>
-                            <p>What are we talking about?</p>
     				    </a>
                     </div>
 				</div><!-- close section--> 
@@ -43,10 +52,10 @@
                 <div id="section-network" class="section">
                     <div class="section-wrap">                    
                         
-                        <a id="btn-creatives" href="#network/creatives" class="btn crea">
+                        <a id="btn-creatives" href="#network/creatives" class="btn point crea">
                             <span class="creatives">CREATIVES</span>
                         </a>
-                        <a id="btn-clients" href="#network/clients" class="btn clt">
+                        <a id="btn-clients" href="#network/clients" class="btn point clt">
                             <span class="clients">CLIENTS</span>
                         </a>
 
@@ -55,20 +64,16 @@
                                 <div class="slideContent">
                                     <div class="container">
                                         <h1><span class="name">Hex Creative</span>
-                                            is a creative network<br>
+                                            is a network of creative<br>
                                             for brands and artistic development
                                         </h1>
-                                         <hr class="grey-medium"></hr>       
-                                        <h2>
-                                            We are<br>
-                                            a network<br>
-                                            of creatives
-                                        </h2>
-                                            <p class="lead">We are not a regular digital agency.</p>
+                                        <hr class="black medium"></hr>       
+                                        
+                                        <p class="lead">We are not a regular digital agency.</p>
 
                                         <div class="row">           
                                             <p class="col-left">We believe in working as teams.
-                                            <span class="white-inline"></span></p>
+                                            <span class="inline black"></span></p>
                                             <p class="col-right">Amazingly talented people joining together to offer creative solutions</p>
                                         </div>
                                     </div>
@@ -84,21 +89,25 @@
                
                 <div id="section-services" class="section">
                     <div class="section-wrap">
-                        <a href="#services/list" class="btn btn-3"></a>
+                        <a href="#services/list" class="btn arrow"></a>
 
                         <div class="section-inner">
                             <div class="slide">
                                 <div class="slideContent">
-                                    <h1 class= "mt40">
-            							<span>You are the</span>
-                                        <span>Avant&ndash;Garde</span>
-            							<span>We are your Arriere&ndash;Garde<br>We watch your back</span>
-                                    </h1>
-
-                                    <h2>As defined by our philosophy</h2>
-
-                                    <div style="background: url('img/core/dash-medium-black.gif') 0px 8px no-repeat;">&nbsp;</div>
-                                    <div>We bring your excellent ideas to life and nurture them into adulthood</div>                     
+                                    <div class="container">
+                                        <h1>
+                							<span class="preheader">You are the</span>
+                                            <span class="header">Avant&ndash;Garde</span>
+                							We are your Arriere&ndash;Garde<br>
+                                            We watch your back
+                                        </h1>
+                                        <h3>As defined by our philosophy</h1>
+                                        
+                                        <div class="row">           
+                                            <p class="col-left"><span class="inline black"></span></p>
+                                            <p class="col-right">We bring your excellent ideas to life and nurture them into adulthood</p>
+                                        </div>
+                                    </div>               
                                 </div>
                             </div>
                            
@@ -113,15 +122,28 @@
                 <div id="section-contact" class="section">
                     <div class="section-wrap">
                         <div class="section-inner">
-                            <h1>We look<br>forward to<br>meeting you</h1>                
-        					<h2>We are Here</h2>
-                            We are always on the lookout for talent, business, friends, like-minded people who want to get to know us. <br>If you’d like to learn more, please howl at us!
-                           
-                            <address>
-                               Williamsburg<br> Brooklyn, NY 11211<br>347.248.0495
-                            </address>
+                            <div class="container">
+                                <h1>We look<br>
+                                    forward to<br>
+                                    meeting you
+                                </h1>                
 
-        					<a href="mailto:info@hotelexistence.com" class="Contact">info@hotelexistence.com</a>
+                                <div class="row">     
+                                    <h2>We are Here</h2>
+                                    <p class="col-left">
+                                        <span class="dash black"></span> 
+                                        We are always on the lookout for talent, business, friends,<br>like-minded people who want to get to know us. <br>
+                                        If you’d like to learn more, please howl at us!
+                                    </p>
+                                    <p class="col-right">
+                                        <strong>Williamsburg Brooklyn, NY</strong>
+                                        <a href="tel:+13472480495" class="phone">347.248.0495</a>
+
+                    					<a href="mailto:info@hexcreativestudio.com" class="email">info@hexcreativestudio.com</a>
+                                    </p>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
                 </div><!-- close section-->

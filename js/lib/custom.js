@@ -3,6 +3,11 @@ $(document).ready(function(){
         $("#wrapper").removeClass("invisible");
         $(".preloader").removeClass("loading");
     }, 600);
+    function resize(){
+        var windowHeight = $(window).outerHeight(true);
+        console.log(windowHeight);
+        $('.section').css({ height:windowHeight});
+    }
     var isTouch = Modernizr.touch;
     if(!isTouch){
         $('#wrapper').fullpage({
@@ -47,23 +52,26 @@ $(document).ready(function(){
                 $('.bg-color.middle').toggleClass('move', (index == 1 && direction == 'down' ) || (index == 3 && direction == 'up'));
             },
             onSlideLeave: function( anchorLink, index, slideIndex, direction){
-            if(index == 2 && slideIndex === 0 && direction == 'right'){
-                $('.point').hide();
+                if(index == 2 && slideIndex === 0 && direction == 'right'){
+                    $('.point').hide();
+                }
+                else if (index == 2 && slideIndex == 1 && direction == 'left'){
+                    setTimeout(function() {
+                        $('.point').fadeIn();
+                    }, 800);
+                }
+                if(index == 3 && slideIndex === 0 && direction == 'right'){
+                    $('.arrow').hide();
+                }
+                else if (index == 3 && slideIndex == 1 && direction == 'left'){
+                    setTimeout(function() {
+                        $('.arrow').fadeIn();
+                    }, 800);
+                }
             }
-            else if (index == 2 && slideIndex == 1 && direction == 'left'){
-                setTimeout(function() {
-                    $('.point').fadeIn();
-                }, 800);
-            }
-            if(index == 3 && slideIndex === 0 && direction == 'right'){
-                $('.arrow').hide();
-            }
-            else if (index == 3 && slideIndex == 1 && direction == 'left'){
-                setTimeout(function() {
-                    $('.arrow').fadeIn();
-                }, 800);
-            }
-        }
         });
+    } else {
+        $(window).on('resize',resize);
+        resize();
     }
 });

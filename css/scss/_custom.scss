@@ -513,7 +513,7 @@ video {
 	z-index: -100;
 	background: url('../img/home/time-lapse.jpg') no-repeat top center;
 	background-size: cover;
-	@include transition(1s opacity);
+	-webkit-background-size:cover;
 }
 /** NETWORK**********************************/
 #blurb {
@@ -735,15 +735,18 @@ video {
 	.btn:not(.arrow-down) {
 		display: none!important
 	}
-} 
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)  { 
-	header.invisible{
-		opacity: 1!important
+	.today {
+		background: url('../img/home/time-lapse.jpg') no-repeat top center;
+		background-size: cover;
+		width:100%;
+		height:100%;
 	}
 }
-@media (max-width: 414px) {
 
+@media (max-width: 414px) {
+	video { 
+	display:none
+	}
 	.logo-enter {
 		max-height: 300px;
 		margin-left: -130px;

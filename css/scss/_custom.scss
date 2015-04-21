@@ -119,14 +119,14 @@ body {
 @for $i from 1 through 6 {
 	@include keyframes(preload-show-#{$i}){
 		from{
-			transform: rotateZ(60* $i + deg) rotateY(-90deg) rotateX(0deg);
-			border-left-color: #bfbfbe;
+			@include transform(rotateZ(60* $i + deg) rotateY(-90deg) rotateX(0deg));					
+			border-left-color: $darkgrey;
 		}
 	}
 	@include keyframes(preload-hide-#{$i}){
 		to{
-			transform: rotateZ(60* $i + deg) rotateY(-90deg) rotateX(0deg);
-			border-left-color: #bfbfbe;
+			@include transform(rotateZ(60* $i + deg) rotateY(-90deg) rotateX(0deg));
+			border-left-color: $darkgrey;
 		}
 	}
 
@@ -136,67 +136,67 @@ body {
 		$reverseIndex: (80 - $i*5);
 
 		#{$startIndex * 1%}{
-			transform: rotateZ(60* $i + deg) rotateY(90deg) rotateX(0deg);
-			border-left-color: #bfbfbe;
+			@include transform(rotateZ(60* $i + deg) rotateY(90deg) rotateX(0deg));
+			border-left-color: $darkgrey;
 		}
 		#{$startIndex + 5%},
 		#{$reverseIndex * 1%}{
-			transform: rotateZ(60* $i + deg) rotateY(0) rotateX(0deg);
-			border-left-color: #fff;
+			@include transform(rotateZ(60* $i + deg) rotateY(0) rotateX(0deg));
+			border-left-color: $white;
 		}
 
 		#{$reverseIndex + 5%},
 		100%{
-			transform: rotateZ(60* $i + deg) rotateY(90deg) rotateX(0deg);
-			border-left-color: #bfbfbe;
+			@include transform(rotateZ(60* $i + deg) rotateY(90deg) rotateX(0deg));
+			border-left-color:  $darkgrey;
 		}
 	}
 }
 
 @include keyframes(preload-flip){
 	0%{
-		transform: rotateY(0deg) rotateZ(-60deg);
+		@include transform(rotateY(0deg) rotateZ(-60deg));
 	}
 	100%{
-		transform: rotateY(360deg) rotateZ(-60deg);
+		@include transform(rotateY(360deg) rotateZ(-60deg));
 	}
 }
 
 .preloader{
 	position: absolute;
-	top: 50%;
 	left: 50%;
+	top:50%;
 	font-size: 20px;
 	display: block;
 	width: 3.75em;
 	height: 4.25em;
 	margin-left: -1.875em;
-	margin-top: -2.125em;
-	transform-origin: center center;
-	transform: rotateY(180deg) rotateZ(-60deg);
+  	margin-top: -2.125em;
+	@include transform-origin(center center);
+	@include transform(rotateY(180deg) rotateZ(-60deg));
 
 	.slice{
 		border-top: 1.125em solid transparent;
 		border-right: none;
 		border-bottom: 1em solid transparent;
-		border-left: 1.875em solid $dark;
+		border-left: 1.875em solid $white;
 		position: absolute;
 		top: 0px;
 		left: 50%;
-		transform-origin: left bottom;
+		@include transform-origin(left bottom);
 		border-radius: 3px 3px 0 0;
 	}
 
 	@for $i from 1 through 6 {
 	  .slice:nth-child(#{$i}) { 
 	  	@include transform(rotateZ(60* $i + deg) rotateY(0deg) rotateX(0));
-	  	@include transform(.15s linear .9 - $i*.08s preload-hide-#{$i} both 1);
+	  	@include animation(.15s linear .9 - $i*.08s preload-hide-#{$i} both 1);
 	  }
 	}
 
 
 	&.loading{
-		@include animation(2s preload-flip steps(2) infinite both);
+		@include animation(2s preload-flip steps(2) 1 both);
 		@for $i from 1 through 6 {
 		  .slice:nth-child(#{$i}) { 
 		  	@include transform(rotateZ(60* $i + deg) rotateY(90deg) rotateX(0));
@@ -212,7 +212,7 @@ body {
 	position: relative; 
 	z-index: 1; 
 	overflow:hidden;
-	@include transition(opacity 1s ease-out);
+	@include transition(opacity .2s ease-out);
 }
 .invisible {
 	opacity:0
@@ -764,7 +764,7 @@ video {
 	}
 }
 
-@media (max-width: 414px) {
+@media (max-width: 740px) {
 	.logo-enter {
 		max-height: 300px;
 		margin-left: -130px;

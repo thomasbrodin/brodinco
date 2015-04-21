@@ -308,7 +308,7 @@ span.black{
 	height: calc(100%/8);
 }
 .bg-color.bottom.moveDown {
-	margin-top:-27.66%;
+	margin-top:-23.66%;
 }
 
 .bg-color.middle {
@@ -472,7 +472,7 @@ span.black{
 	background:url('../img/core/arrow-btn.png') no-repeat;
 	z-index:999;
 	background-position:top center;
-	transition:none!important;
+	@include transition-property(top);
 }
 
 .arrow:hover{
@@ -757,7 +757,8 @@ video {
 		margin-left: 0;
 	}
 	.bg-color.middle {
-		height:54%
+		height:40%;
+		margin-top: 20%
 	}
 	.bg-color.bottom {
 		display: none

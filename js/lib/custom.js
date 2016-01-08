@@ -12,7 +12,6 @@ $(document).ready(function(){
 				$('#wrapper').fullpage({
 						menu: '#mainNav',
 						verticalCentered: false,
-						responsive: 900,
 						scrollBar: true,
 						scrollingSpeed: 700,
 						anchors: ['today', 'network', 'services', 'contact'],

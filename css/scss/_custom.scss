@@ -334,7 +334,7 @@ span.black{
 	height: calc(100%/8);
 }
 .bg-color.bottom.moveDown {
-	@include transform(translateY(-100%));
+	@include transform(translateY(-87%));
 }
 
 .bg-color.middle {
@@ -344,7 +344,7 @@ span.black{
 }
 .bg-color.middle.move {
 	background-color: $white;
-	@include transform(translateY(-100%));
+	@include transform(translateY(-83%));
 }
 
 .btn{

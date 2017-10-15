@@ -1538,12 +1538,6 @@
 		"oAP": "\/favicon.ico",
 		"oF": 0
 		},
-	"\/googlece0cd344a2effbb7.html": {
-		"ft": 8192,
-		"oA": 0,
-		"oAP": "\/googlece0cd344a2effbb7.html",
-		"oF": 0
-		},
 	"\/img\/core\/arrow-btn.png": {
 		"ft": 32768,
 		"iS": 1639,
@@ -1583,6 +1577,16 @@
 		"oIPL": 0,
 		"opt": 0,
 		"oT": 1,
+		"q": 100
+		},
+	"\/img\/home\/bco-black.jpg": {
+		"ft": 16384,
+		"iS": 7858,
+		"oA": 1,
+		"oAP": "\/img\/home\/bco-black.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
 		"q": 100
 		},
 	"\/img\/home\/bco-white.png": {
@@ -4168,21 +4172,21 @@
 	"languageDefaultsUserDefined": [
 		{
 			"autoOutputAction": 1,
-			"autoOutputPathFilenamePattern": "*.php",
-			"autoOutputPathRelativePath": "",
-			"autoOutputPathReplace1": "",
-			"autoOutputPathReplace2": "",
-			"autoOutputPathStyle": 0,
-			"fileExtension": "php"
-			},
-		{
-			"autoOutputAction": 1,
 			"autoOutputPathFilenamePattern": "*.twig",
 			"autoOutputPathRelativePath": "",
 			"autoOutputPathReplace1": "",
 			"autoOutputPathReplace2": "",
 			"autoOutputPathStyle": 0,
 			"fileExtension": "twig"
+			},
+		{
+			"autoOutputAction": 1,
+			"autoOutputPathFilenamePattern": "*.php",
+			"autoOutputPathRelativePath": "",
+			"autoOutputPathReplace1": "",
+			"autoOutputPathReplace2": "",
+			"autoOutputPathStyle": 0,
+			"fileExtension": "php"
 			}
 		],
 	"overrideExternalServerCSS": 0,

@@ -1,4 +1,4 @@
-HEX creative 
+Brodin & Co
 ------------
 
-Repository of Hexcreativestudio.com
+Landing page for Creative Consultancy.

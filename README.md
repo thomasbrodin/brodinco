@@ -1,4 +1,4 @@
-Hotel Existence
+Brodin & Co
 ---------------
 
 Landing page for Creative Consultancy.
